@@ -7,7 +7,7 @@ const app = express()
 app.use(express.static('public'))
 
 app.get('/api/car/save', (req, res) => {
-    const { id: _id, vendor, speed } = req.query
+    const { _id = '', vendor, speed } = req.query
     const car = { _id, vendor, speed: +speed }
 
     carService.save(car)

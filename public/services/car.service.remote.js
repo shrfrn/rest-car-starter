@@ -47,7 +47,7 @@ function save(car) {
     const queryStr = '/save?' +
         `vendor=${car.vendor}&` +
         `speed=${car.speed}&` +
-        `id=${car._id || ''}`
+        `_id=${car._id || ''}`
 
     return axios.get(BASE_URL + queryStr)
         .then(res => res.data)

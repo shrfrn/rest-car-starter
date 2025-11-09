@@ -1,4 +1,4 @@
-import { utilService } from './util.service.js'
+import { loadFromStorage, saveToStorage } from './util.service.js'
 import { storageService } from './async-storage.service.js'
 
 const CAR_KEY = 'carDB'
@@ -52,14 +52,14 @@ function getDefaultFilter() {
 }
 
 function _createCars() {
-    let cars = utilService.loadFromStorage(CAR_KEY)
+    let cars = loadFromStorage(CAR_KEY)
     if (!cars || !cars.length) {
         cars = []
         cars.push(_createCar('audu', 300))
         cars.push(_createCar('fiak', 120))
         cars.push(_createCar('subali', 50))
         cars.push(_createCar('mitsu', 150))
-        utilService.saveToStorage(CAR_KEY, cars)
+        saveToStorage(CAR_KEY, cars)
     }
 }
 

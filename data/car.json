@@ -2,7 +2,7 @@
   {
     "_id": "c102",
     "vendor": "fiak",
-    "speed": 5
+    "speed": 4
   },
   {
     "_id": "c103",
@@ -18,5 +18,10 @@
     "_id": "KKnno",
     "vendor": "fiak",
     "speed": 2
+  },
+  {
+    "_id": "KfoFq",
+    "vendor": "subali",
+    "speed": 8
   }
 ]
